@@ -1,5 +1,6 @@
 "use client";
 import { useForm } from "react-hook-form";
+import { useRouter } from "next/navigation";
 
 export default function RegisterPage() {
   const {
@@ -8,23 +9,20 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm();
 
+  const router = useRouter();
+
   const omSubmit = handleSubmit(async (data) => {
     const res = await fetch("/api/auth/register", {
       method: "POST",
-      body: JSON.stringify({
-        USUNOM: data.username,
-        USUCOR: data.email,
-        USUPAS: data.password,
-        ROLCOD: 1,
-        CreatedADM: 1,
-        UpdatedADM: 1,
-      }),
+      body: JSON.stringify(data),
       headers: {
         "Content-type": "application/json",
       },
     });
-    const resJSON = await res.json();
-    console.log(resJSON);
+
+    if (res.ok) {
+      router.push("/auth/login");
+    }
   });
 
   return (
