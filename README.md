@@ -1,36 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# next-components
 
-## Getting Started
+Este es un conjunto de componentes reutilizables para proyectos desarrollados con Next.js. Los componentes aquí incluidos están diseñados para facilitar el desarrollo y mejorar la consistencia en tus aplicaciones.
 
-First, run the development server:
+## Autor
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Diego Segovia
+- GitHub: [diegoseg15](https://github.com/diegoseg15)
+- Instagram: [diegoseg_15](https://www.instagram.com/diegoseg_15/)
+- TikTok: [diegoseg_15](https://www.tiktok.com/@diegoseg_15)
+
+## Instalación
+
+Para utilizar estos componentes en tu proyecto, puedes clonar este repositorio utilizando el siguiente comando:
+
+```
+git clone https://github.com/diegoseg15/next-components.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Componentes Disponibles
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+- **Login:** Este componente está en construcción y estará disponible próximamente.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Estado del Proyecto
 
-## Learn More
+:construction: Componente Login en construcción :construction:
 
-To learn more about Next.js, take a look at the following resources:
+## Contribución
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+¡Las contribuciones son bienvenidas! Si deseas contribuir a este proyecto, por favor abre un problema o envía una solicitud de extracción.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Licencia
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
