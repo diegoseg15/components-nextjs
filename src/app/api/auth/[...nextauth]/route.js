@@ -23,16 +23,16 @@ const authOptions = {
           },
         });
 
-        if (!userFound) return null;
-
         console.log(userFound);
+
+        if (!userFound) throw new Error("Usuario no encontrado");
 
         const matchPassword = await bcrypt.compare(
           credentials.password,
           userFound.USUPAS
         );
 
-        if (!matchPassword) return null;
+        if (!matchPassword) throw new Error("Contraseña incorrecta");
 
         return {
           id: userFound.USUCOD,

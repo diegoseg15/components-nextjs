@@ -39,7 +39,7 @@ export default function RegisterPage() {
         <h1 className="text-slate-200 font-bold text-4xl mb-4">Register</h1>
 
         {/* 📝 :EXPLAIN: Campo de entrada para el nombre de usuario. */}
-        <label className="text-slate-500 mb-2 block" htmlFor="username">
+        <label className="text-slate-500 mb-2 block text-sm" htmlFor="username">
           Username
         </label>
         <input
@@ -58,7 +58,7 @@ export default function RegisterPage() {
         )}
 
         {/* 📝 :EXPLAIN: Campo de entrada para el correo electrónico. */}
-        <label className="text-slate-500 mb-2 block" htmlFor="email">
+        <label className="text-slate-500 mb-2 block text-sm" htmlFor="email">
           Email
         </label>
         <input
@@ -77,7 +77,7 @@ export default function RegisterPage() {
         )}
 
         {/* 📝 :EXPLAIN: Campo de entrada para la contraseña. */}
-        <label className="text-slate-500 mb-2 block" htmlFor="password">
+        <label className="text-slate-500 mb-2 block text-sm" htmlFor="password">
           Contraseña
         </label>
         <input
@@ -96,7 +96,10 @@ export default function RegisterPage() {
         )}
 
         {/* 📝 :EXPLAIN: Campo de entrada para confirmar la contraseña. */}
-        <label className="text-slate-500 mb-2 block" htmlFor="confirmPassword">
+        <label
+          className="text-slate-500 mb-2 block text-sm"
+          htmlFor="confirmPassword"
+        >
           Confirmar Contraseña
         </label>
         <input
