@@ -3,7 +3,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import prisma from "@/libs/prisma";
 import bcrypt from "bcrypt";
 
-const authOptions = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
@@ -23,7 +23,7 @@ const authOptions = {
           },
         });
 
-        console.log(userFound);
+        // console.log(userFound);
 
         if (!userFound) throw new Error("Usuario no encontrado");
 
@@ -42,6 +42,9 @@ const authOptions = {
       },
     }),
   ],
+  pages: {
+    signIn: "/auth/login",
+  },
 };
 
 const handler = NextAuth(authOptions);

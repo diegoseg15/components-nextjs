@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export default function LoginPage() {
   const {
@@ -12,6 +13,8 @@ export default function LoginPage() {
 
   const router = useRouter();
 
+  const [error, setError] = useState(null);
+
   const onSubmit = handleSubmit(async (data) => {
     // console.log(data);
     const res = await signIn("credentials", {
@@ -21,17 +24,21 @@ export default function LoginPage() {
     });
 
     if (res.error) {
-      console.log(res);
-      alert(res.error);
+      setError(res.error);
     } else {
-      console.log(res);
+      // console.log(res);
       router.push("/dashboard");
+      router.refresh();
     }
   });
 
   return (
     <div className="h-[calc(100vh-7rem)] flex justify-center items-center">
       <form className="w-1/4" onSubmit={onSubmit}>
+        {error && (
+          <p className="bg-red-500 text-xs text-white p-3 rounded">{error}</p>
+        )}
+
         <h1 className="text-slate-200 font-bold text-4xl mb-4">Login</h1>
 
         {/* 📝 :EXPLAIN: Campo de entrada para el nombre de usuario. */}
